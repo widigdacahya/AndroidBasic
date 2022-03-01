@@ -1,3 +1,81 @@
 <resources>
     <string name="app_name">CahyaSANote</string>
+    <string name="icon_sa">icon-sa</string>
+    <string name="sa_title">SA Title</string>
+    <string name="all_chars">The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog</string>
+
+
+
+    <string-array name="data_sa_name">
+        <item>Layered</item>
+        <item>Event driven</item>
+        <item>Microkernel</item>
+        <item>Microservices</item>
+        <item>Space Based</item>
+        <item>Client Server</item>
+        <item>Master Slave</item>
+        <item>Pipe Filter</item>
+        <item>Broker</item>
+        <item>Peer to Peer</item>
+        <item>MVC</item>
+        <item>Blackboard</item>
+        <item>Interpreter</item>
+    </string-array>
+
+
+    <string-array name="data_sa_description">
+        <item>This pattern can be used to structure programs that can be decomposed into groups of subtasks, each of which is at a particular level of abstraction. Each layer provides services to the next higher layer. Commonly found 4 layers of a general information system are Presentation layer (also known as UI layer), Application layer (also known as service layer) Business logic layer (also known as domain layer), Data access layer (also known as persistence layer)</item>
+        <item>The event driven architectural style consists of two topologies mediator and broker. A mediator is used when multiple steps are needed to be orchestrated within an event bus through a central mediator. On the other hand, a broker is used to chain events together without using a central mediator</item>
+        <item>This architecture pattern consists of two types of components  a core system and several plug-in modules. While the core system works on minimal functionality to keep the system operational, the plug in modules are independent components with specialized processing</item>
+        <item>Microservices architecture pattern is seen as a viable alternative to monolithic applications and service-oriented architectures. The components are deployed as separate units through an effective, streamlined delivery pipeline. It has some benefits, they are enhanced scalability and a high degree of decoupling within the application</item>
+        <item>The concept of tuple space the idea of distributed shared memory is the basis of the name of this architecture. The space-based pattern comprises two primary components a processing unit and a virtualized middleware</item>
+        <item>A client server architecture pattern is described as a distributed application structure having two main components  a client and a server. This architecture facilitates the communication between the client and the server, which may or may not be under the same network. A client requests specific resources to be fetched from the server, which might be in the form of data, content, services, files, etc. The server identifies the requests made and responds to the client appropriately by sending over the requested resources</item>
+        <item>Imagine a single database receiving multiple similar requests at the same time. Naturally, processing every single request at the same time can complicate and slow down the application process. A solution to this problem is a master slave architecture pattern that functions with the master database launching multiple slave components to process those requests quickly</item>
+        <item>A pipe filter architecture pattern processes a stream of data in a unidirectional flow where components are referred to as filters, and pipes are those which connect these filters. The chain of processing data takes place where the pipes transmit data to the filters, and the result of one filter becomes the input for the next filter. The function of this architecture is to break down significant components or processes into independent and multiple components that can be processed simultaneously</item>
+        <item>A broker pattern is used for structuring distributed systems with decoupled components. By invoking remote services, components can interact with others in broker architecture patterns. Also, the broker is responsible for all the coordination and communication among the components</item>
+        <item>In the peer to peer architectural pattern, individual components are called peers. A peer can act as a client, a server, or both and change its role dynamically over time. As a client, a peer can request service from other peers, and as a server, a peer can provide services to other peers. The significant difference between peer-to-peer and client-server architecture is that each computer on the network has considerable authority and the absence of a centralized server. Its capacity increases as more and more computers join the network</item>
+        <item>This pattern, also known as MVC pattern, divides an interactive application in to 3 parts as,Model(contains the core functionality and data),View(displays the information to the user, more than one view may be defined), and Controller (handles the input from the user). This is done to separate internal representations of information from the ways information is presented to, and accepted from, the user. It decouples components and allows efficient code reuse</item>
+        <item>This pattern is useful for problems for which no deterministic solution strategies are known. The blackboard pattern consists of 3 main components. Blackboard (a structured global memory containing objects from the solution space), Knowledge source (specialized modules with their own representation), Control component (selects, configures and executes modules.) All the components have access to the blackboard. Components may produce new data objects that are added to the blackboard. Components look for particular kinds of data on the blackboard, and may find these by pattern matching with the existing knowledge source</item>
+        <item>This pattern is used for designing a component that interprets programs written in a dedicated language. It mainly specifies how to evaluate lines of programs, known as sentences or expressions written in a particular language. The basic idea is to have a class for each symbol of the language</item>
+    </string-array>
+
+
+    <string-array name="data_sa_usage">
+        <item>Applications that are needed to be built quickly, Enterprise applications that require traditional IT departments and processes,Appropriate for teams with inexperienced developers and limited knowledge of architecture patterns, Applications that require strict standards of maintainability and testability.</item>
+        <item>For applications where individual data blocks interact with only a few modules, Helps with user interfaces.</item>
+        <item>Applications that have a clear segmentation between basic routines and higher-order rules, Applications that have a fixed set of core routines and dynamic set of rule that needs frequent updates</item>
+        <item>Businesses and web applications that require rapid development, Websites with small components, data centers with well-defined boundaries, and remote teams globally.</item>
+        <item>Applications and software systems that function with a large user base and a constant load of requests, Applications that are supposed to address scalability and concurrency issues.</item>
+        <item>Applications like emails, online banking services, the World Wide Web, network printing, file sharing applications, gaming apps, etc, Applications that focus on real-time services like telecommunication apps are built with a distributed application structure, Applications that require controlled access and offer multiple services for a large number of distributed clients, An application with centralized resources and services that has to be distributed over multiple servers.</item>
+        <item>Development of Operating Systems that may require a multiprocessors compatible architecture, Advanced applications where larger services have to be decomposed into smaller components, Applications processing raw data stored in different servers over a distributed network, Web browsers that follow multithreading to increase its responsiveness.</item>
+        <item>It can be used for applications facilitating a simple, one-way data processing and transformation, Applications using tools like Electronic Data Interchange and External Dynamic List, Development of data compilers used for error-checking and syntax analysis, To perform advanced operations in Operating Systems like UNIX, where the output and input of programs are connected in a sequence.</item>
+        <item>Used in message broker softwares such as Apache ActiveMQ, Apache Kafka, RabbitMQ, and JBoss Messaging, For structuring distributed systems that have decoupled components.</item>
+        <item>File sharing networks such as Gnutella and G2, Cryptocurrency-based products such as Bitcoin and Blockchain, Multimedia products such as P2PTV and PDTP.</item>
+        <item>Architecture for World Wide Web applications in major programming languages, Web frameworks such as Django and Rails.</item>
+        <item>Speech recognition, Vehicle identification and tracking, Protein structure identification, Sonar signals interpretation.</item>
+        <item>Database query languages such as SQL, Languages used to describe communication protocols</item>
+    </string-array>
+
+
+
+    <string-array name="data_sa_shortcomings">
+        <item>Unorganized source codes and modules with no definite roles can become a problem for the application, Skipping previous layers to create tight coupling can lead to a logical mess full of complex interdependencies, Basic modifications can require a complete redeployment of the application.</item>
+        <item>Testing individual modules can only be done if they are independent, otherwise, they need to be tested in a fully functional system, When several modules are handling the same events, error handling becomes challenging to structure, Development of a system-wide data structure for events can become arduous if the events have different needs, Maintaining a transaction-based mechanism for consistency can become complex with decoupled and independent modules</item>
+        <item>The plugins must have good handshaking code so that the microkernel is aware of the plugin installation and is ready to work, Changing a microkernel is almost impossible if there are multiple plugins dependent on it, It is difficult to choose the right granularity for the kernel function in advance and more complex at a later stage.</item>
+        <item>Designing the right level of granularity for a service component is always a challenge, All applications do not include tasks that can be split into independent units, Performance can be affected because of tasks being spread across different microservices.</item>
+        <item>It is a complex task to cache the data for speed without disturbing multiple copies.</item>
+        <item>Incompatible server capacity can slow down, causing a performance bottleneck, Servers are usually prone to a single point of failure, Changing the pattern is a complex and expensive process, Server maintenance can be a demanding and expensive task.</item>
+        <item>Failure of the master component can lead to a loss of data with no backup over the slave components, Dependencies within the system can lead to a failure of the slave components, There can be an increase in overhead costs due to the isolated nature of the slave components.</item>
+        <item>There can be a loss of data in between filters if the infrastructure design is not reliable,The slowest filter limits the performance and efficiency of the entire architecture, During transmission between filters, the data-transformation overhead costs might increase, The continuous transformational character of the architecture makes it less user-friendly for interactional systems.</item>
+        <item>Shallow fault tolerance capacity, Requires standardization of service description, The hidden layer may decrease software performance, Higher latency and requires more effort in deployment.</item>
+        <item>No guarantee of high-quality service, Achieving robust security is challenging, Performance depends on the number of nodes connected to the network, No way to backup files or folders, Might need a specific interface to read the file.</item>
+        <item>The MVC pattern introduces new levels of indirection and thereof increases the complexity of the solution. It also increases the event-driven nature of the user-interface code, which can become more difficult to debug, Developers cannot completely ignore the view of the model even if they are decoupled. If the model undergoes frequent changes, the views could be flooded with update requests, Views like graphical displays may take some time to render, As a result, the view may fall behind update requests.</item>
+        <item>The structure change of blackboard may have a significant impact on all of its agents as close dependency exists between blackboard and knowledge source, It can be difficult to decide when to terminate the reasoning as only approximate solution is expected, Problems in synchronization of multiple agents, Major challenges in designing and testing of system.</item>
+        <item>Slower, Dependencies file required, and Less Secure</item>
+    </string-array>
+
+
+
+
+
 </resources>
