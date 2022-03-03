@@ -8,6 +8,16 @@ import com.example.cahyasanote.databinding.ItemSaBinding
 
 class ListArchAdapter(private val listArchitecure: ArrayList<Architecture>): RecyclerView.Adapter<ListArchAdapter.ListViewHolder>() {
 
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Architecture)
+    }
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
     class ListViewHolder(var binding: ItemSaBinding) : RecyclerView.ViewHolder(binding.root) {
 
     }
@@ -24,7 +34,7 @@ class ListArchAdapter(private val listArchitecure: ArrayList<Architecture>): Rec
         holder.binding.tvSaDescUI.text = archDesc
         holder.binding.ivIconSaUI.setImageResource(archIcon)
 
-
+        holder.itemView.setOnClickListener{onItemClickCallback.onItemClicked(listArchitecure[holder.adapterPosition])}
     }
 
     override fun getItemCount(): Int = listArchitecure.size

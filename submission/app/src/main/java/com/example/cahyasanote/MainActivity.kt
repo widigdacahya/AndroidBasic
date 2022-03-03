@@ -2,6 +2,7 @@ package com.example.cahyasanote
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cahyasanote.databinding.ActivityMainBinding
 
@@ -35,6 +36,14 @@ class MainActivity : AppCompatActivity() {
 
         val listSWArchAdapter = ListArchAdapter(swArchlist)
         binding.rvItemSaUI.adapter = listSWArchAdapter
+
+
+        //[--4 click item for toast]
+        listSWArchAdapter.setOnItemClickCallback(object :ListArchAdapter.OnItemClickCallback {
+            override fun onItemClicked(dataArch: Architecture) {
+                anItemClicked(dataArch)
+            }
+        })
     }
 
 
@@ -55,5 +64,11 @@ class MainActivity : AppCompatActivity() {
             }
             return listOfDataSWArch
         }
+
+
+    //[4.click an item]
+    private fun anItemClicked(architecture: Architecture) {
+        Toast.makeText(this, "${architecture.archName} detail", Toast.LENGTH_SHORT).show()
+    }
 
 }
