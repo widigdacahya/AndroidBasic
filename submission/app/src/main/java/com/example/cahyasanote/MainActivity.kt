@@ -1,5 +1,6 @@
 package com.example.cahyasanote
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -42,6 +43,12 @@ class MainActivity : AppCompatActivity() {
         listSWArchAdapter.setOnItemClickCallback(object :ListArchAdapter.OnItemClickCallback {
             override fun onItemClicked(dataArch: Architecture) {
                 anItemClicked(dataArch)
+
+                //[5.to DetailActivity data]
+                val intentDataArchToDetail = Intent(this@MainActivity, DetailActivity::class.java)
+                intentDataArchToDetail.putExtra("DATA", dataArch)
+                startActivity(intentDataArchToDetail)
+
             }
         })
     }
@@ -70,5 +77,8 @@ class MainActivity : AppCompatActivity() {
     private fun anItemClicked(architecture: Architecture) {
         Toast.makeText(this, "${architecture.archName} detail", Toast.LENGTH_SHORT).show()
     }
+
+
+
 
 }

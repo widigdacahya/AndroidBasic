@@ -3,7 +3,10 @@
     <string name="icon_sa">icon-sa</string>
     <string name="sa_title">SA Title</string>
     <string name="all_chars">The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog</string>
-
+    <string name="diagram_software_architecture">diagram software architecture</string>
+    <string name="description">Description</string>
+    <string name="usage">Usage</string>
+    <string name="shortcoming">Shortcoming</string>
 
 
     <string-array name="data_sa_name">
@@ -57,7 +60,6 @@
     </string-array>
 
 
-
     <string-array name="data_sa_shortcomings">
         <item>Unorganized source codes and modules with no definite roles can become a problem for the application, Skipping previous layers to create tight coupling can lead to a logical mess full of complex interdependencies, Basic modifications can require a complete redeployment of the application.</item>
         <item>Testing individual modules can only be done if they are independent, otherwise, they need to be tested in a fully functional system, When several modules are handling the same events, error handling becomes challenging to structure, Development of a system-wide data structure for events can become arduous if the events have different needs, Maintaining a transaction-based mechanism for consistency can become complex with decoupled and independent modules</item>
@@ -73,7 +75,6 @@
         <item>The structure change of blackboard may have a significant impact on all of its agents as close dependency exists between blackboard and knowledge source, It can be difficult to decide when to terminate the reasoning as only approximate solution is expected, Problems in synchronization of multiple agents, Major challenges in designing and testing of system.</item>
         <item>Slower, Dependencies file required, and Less Secure</item>
     </string-array>
-
 
 
     <integer-array name="data_sa_icon">
@@ -108,7 +109,6 @@
         <item>@drawable/blackboardpattern</item>
         <item>@drawable/interpreterpattern</item>
     </integer-array>
-
 
 
 </resources>
