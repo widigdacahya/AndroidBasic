@@ -76,6 +76,39 @@
 
 
 
+    <integer-array name="data_sa_icon">
+        <item>@drawable/ic_baseline_layers_24</item>
+        <item>@drawable/ic_baseline_event_24</item>
+        <item>@drawable/ic_baseline_fiber_smart_record_24</item>
+        <item>@drawable/ic_baseline_dynamic_feed_24</item>
+        <item>@drawable/ic_baseline_space_bar_24</item>
+        <item>@drawable/ic_baseline_person_pin_circle_24</item>
+        <item>@drawable/ic_baseline_people_alt_24</item>
+        <item>@drawable/ic_baseline_filter_alt_24</item>
+        <item>@drawable/ic_baseline_alt_route_24</item>
+        <item>@drawable/ic_baseline_edit_road_24</item>
+        <item>@drawable/ic_baseline_settings_overscan_24</item>
+        <item>@drawable/ic_baseline_developer_board_24</item>
+        <item>@drawable/ic_baseline_swap_calls_24</item>
+    </integer-array>
+
+
+    <integer-array name="data_sa_diagram">
+        <item>@drawable/layerpattern</item>
+        <item>@drawable/eventdrivenpattern</item>
+        <item>@drawable/microkernelpattern</item>
+        <item>@drawable/microservicepattern</item>
+        <item>@drawable/spacebasedpattern</item>
+        <item>@drawable/clientserverpattern</item>
+        <item>@drawable/masterslavepattern</item>
+        <item>@drawable/pipefilterpattern</item>
+        <item>@drawable/brokerpattern</item>
+        <item>@drawable/peertopeerpattern</item>
+        <item>@drawable/mvcpattern</item>
+        <item>@drawable/blackboardpattern</item>
+        <item>@drawable/interpreterpattern</item>
+    </integer-array>
+
 
 
 </resources>
