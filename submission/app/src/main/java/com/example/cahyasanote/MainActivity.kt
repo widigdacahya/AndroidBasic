@@ -45,8 +45,18 @@ class MainActivity : AppCompatActivity() {
                 anItemClicked(dataArch)
 
                 //[5.to DetailActivity data]
+                val SAItemSent = Architecture(
+                    dataArch.archName,
+                    dataArch.archDesc,
+                    dataArch.archUsage,
+                    dataArch.archShortcoming,
+                    dataArch.archDiagram,
+                    dataArch.archIcon
+                )
+
+
                 val intentDataArchToDetail = Intent(this@MainActivity, DetailActivity::class.java)
-                intentDataArchToDetail.putExtra("DATA", dataArch)
+                intentDataArchToDetail.putExtra("EXTRA_DATA", SAItemSent)
                 startActivity(intentDataArchToDetail)
 
             }
