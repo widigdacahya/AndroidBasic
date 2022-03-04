@@ -23,6 +23,7 @@ class DetailActivity : AppCompatActivity() {
 
         detailBinding.ivSaDiagramDetailUI.setImageResource(aDataSA.archDiagram)
 
+
         detailBinding.ivSaIconDetailUI.setImageResource(aDataSA.archIcon)
 
         val saName = detailBinding.tvSaNameDetailUI
