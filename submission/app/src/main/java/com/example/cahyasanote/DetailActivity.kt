@@ -27,24 +27,19 @@ class DetailActivity : AppCompatActivity() {
         detailBinding.ivSaIconDetailUI.setImageResource(aDataSA.archIcon)
 
         val saName = detailBinding.tvSaNameDetailUI
-        saName.text = aDataSA.archName.toString()
+        saName.text = aDataSA.archName
 
-        //detailBinding.tvSaNameDetailUI.text=aDataSA.archName
 
 
         val saDesc = detailBinding.tvSaDescDataDetailUI
         saDesc.text = aDataSA.archDesc
 
-        //detailBinding.tvSaDescDataDetailUI.text=aDataSA.archDesc
 
 
-
-        //detailBinding.tvSaUsageDataDetailUI.text=aDataSA.archUsage
         val saUsage = detailBinding.tvSaUsageDataDetailUI
         saUsage.text = aDataSA.archUsage
 
 
-        //detailBinding.tvSaShortcomingDataDetailUI.text=aDataSA.archUsage
         val saShortcoming = detailBinding.tvSaShortcomingDataDetailUI
         saShortcoming.text = aDataSA.archShortcoming
 
