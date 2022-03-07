@@ -1,7 +1,6 @@
 package com.example.cahyasanote
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cahyasanote.databinding.ItemSaBinding
@@ -29,7 +28,7 @@ class ListArchAdapter(private val listArchitecure: ArrayList<Architecture>): Rec
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
 
-        val (archName, archDesc, archUsage,archShortcomings, archDiagram, archIcon) = listArchitecure[position]
+        val (archName, archDesc, _archUsage, _archShortcomings, _archDiagram, archIcon, _archExp) = listArchitecure[position]
         holder.binding.tvSaTitleUI.text = archName
         holder.binding.tvSaDescUI.text = archDesc
         holder.binding.ivIconSaUI.setImageResource(archIcon)

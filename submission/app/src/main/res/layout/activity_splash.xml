@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgsplash"
+    tools:context=".SplashActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_half_splash_UI"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_title_app_UI"
+        app:layout_constraintBottom_toTopOf="@id/gl_half_splash_UI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/some_note_of_sa"
+        android:layout_width="0dp"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_ic_app_UI"
+        app:layout_constraintTop_toBottomOf="@id/gl_half_splash_UI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:src="@drawable/ic_baseline_edit_note_24"
+        android:contentDescription="@string/icon_app" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

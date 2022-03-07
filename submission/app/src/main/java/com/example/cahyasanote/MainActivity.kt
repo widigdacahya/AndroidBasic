@@ -3,6 +3,8 @@ package com.example.cahyasanote
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cahyasanote.databinding.ActivityMainBinding
@@ -44,19 +46,9 @@ class MainActivity : AppCompatActivity() {
             override fun onItemClicked(dataArch: Architecture) {
                 anItemClicked(dataArch)
 
-                //[5.to DetailActivity data]
-                val SAItemSent = Architecture(
-                    dataArch.archName,
-                    dataArch.archDesc,
-                    dataArch.archUsage,
-                    dataArch.archShortcoming,
-                    dataArch.archDiagram,
-                    dataArch.archIcon
-                )
-
-
                 val intentDataArchToDetail = Intent(this@MainActivity, DetailActivity::class.java)
-                intentDataArchToDetail.putExtra("EXTRA_DATA", SAItemSent)
+                //[5.to DetailActivity data]
+                intentDataArchToDetail.putExtra("EXTRA_DATA", dataArch)
                 startActivity(intentDataArchToDetail)
 
             }
@@ -73,12 +65,17 @@ class MainActivity : AppCompatActivity() {
             val archDataShortcoming = resources.getStringArray(R.array.data_sa_shortcomings)
             val archDataDiagram = resources.obtainTypedArray(R.array.data_sa_diagram)
             val archDataIcon = resources.obtainTypedArray(R.array.data_sa_icon)
+            val archExpl = resources.getStringArray(R.array.data_sa_explanation)
 
             val listOfDataSWArch = ArrayList<Architecture>()
             for(i in archDataName.indices) {
-                val swArch = Architecture(archDataName[i],archDataDesc[i],archDataUsage[i],archDataShortcoming[i], archDataDiagram.getResourceId(i,-1), archDataIcon.getResourceId(i,-1))
+                val swArch = Architecture(archDataName[i],archDataDesc[i],archDataUsage[i],archDataShortcoming[i], archDataDiagram.getResourceId(i,-1), archDataIcon.getResourceId(i,-1), archExpl[i])
+
                 listOfDataSWArch.add(swArch)
             }
+            archDataDiagram.recycle()
+            archDataIcon.recycle()
+
             return listOfDataSWArch
         }
 
@@ -88,7 +85,19 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, "${architecture.archName} detail", Toast.LENGTH_SHORT).show()
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu,menu)
 
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.about_menu) {
+            val intentToAbout = Intent(this@MainActivity, AboutActivity::class.java)
+            startActivity(intentToAbout)
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
 
 }

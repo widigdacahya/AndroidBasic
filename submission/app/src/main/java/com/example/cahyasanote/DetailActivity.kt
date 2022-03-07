@@ -6,10 +6,6 @@ import com.example.cahyasanote.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
 
-    companion object {
-        const val EXTRA_DATA = "EXTRA_DATA"
-    }
-
     private lateinit var detailBinding: ActivityDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,28 +17,22 @@ class DetailActivity : AppCompatActivity() {
 
         val aDataSA = intent.getParcelableExtra<Architecture>(EXTRA_DATA) as Architecture
 
-        detailBinding.ivSaDiagramDetailUI.setImageResource(aDataSA.archDiagram)
+        detailBinding.apply {
+            ivSaDiagramDetailUI.setImageResource(aDataSA.archDiagram)
+            ivSaIconDetailUI.setImageResource(aDataSA.archIcon)
+            tvSaNameDetailUI.text  = aDataSA.archName
+            tvSaDescDataDetailUI.text = aDataSA.archDesc
+            tvSaUsageDataDetailUI.text = aDataSA.archUsage
+            tvSaShortcomingDataDetailUI.text = aDataSA.archShortcoming
+            tvSaMoreexpDataDetailUI.text = aDataSA.archExp
+        }
 
+        supportActionBar?.title = aDataSA.archName
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        detailBinding.ivSaIconDetailUI.setImageResource(aDataSA.archIcon)
+    }
 
-        val saName = detailBinding.tvSaNameDetailUI
-        saName.text = aDataSA.archName
-
-
-
-        val saDesc = detailBinding.tvSaDescDataDetailUI
-        saDesc.text = aDataSA.archDesc
-
-
-
-        val saUsage = detailBinding.tvSaUsageDataDetailUI
-        saUsage.text = aDataSA.archUsage
-
-
-        val saShortcoming = detailBinding.tvSaShortcomingDataDetailUI
-        saShortcoming.text = aDataSA.archShortcoming
-
-
+    companion object {
+        const val EXTRA_DATA = "EXTRA_DATA"
     }
 }
